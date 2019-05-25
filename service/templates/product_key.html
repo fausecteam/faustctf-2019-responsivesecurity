@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="icon" href="data:;base64,iVBORw0KGgo="><!-- empty png image-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+		<link rel="stylesheet" href="{{url_for("static", filename="style.css")}}">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	</head>
+	<body>
+		<h1>License Required</h1>
+		<p>Please provide a product key. It looks like <code>XXXX-XXXX-XXXX-XXXX</code> where <code>X</code> is a hexadecimal digit.</p>
+		<form name="product_key_form">
+			<input type="text" name="product_key" size="19" maxlength="19">
+			<input type="submit" value="Check">
+		</form>
+		<div style="display: none" class="alert alert-warning" id="warning">Nothing to complain about</div>
+		<p>The Product key can be found in <code>{{PRODUCT_KEY_FILE}}</code> on the server.</p>
+
+		<script type="text/javascript">
+			oldpk = "";
+			function format_productkey(){
+				var pk = document.forms.product_key_form.product_key.value;
+				if(pk.length == oldpk.length + 1){
+					pk = pk.toUpperCase();
+					if(pk.length == 4 || pk.length == 9 || pk.length == 14) pk = pk + "-";
+				}
+				document.forms.product_key_form.product_key.value = pk;
+				oldpk = pk;
+			}
+			function setcookie(ev){
+				var pk = document.forms.product_key_form.product_key.value;
+				if (! pk.match(/^[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{4}-[A-F0-9]{4}$/)){
+					warn("Invalid product key format");
+					ev.preventDefault();
+					return false;
+				}
+				var expires = new Date();
+				expires.setTime(expires.getTime() + 10 * 3600 * 1000);
+				document.cookie = "product_key=" + pk + "; expires=" + expires.toUTCString();
+				window.location.reload(true);
+				ev.preventDefault();
+				return false;
+			}
+			function warn(text){
+				var warnbox = document.getElementById("warning");
+				warnbox.textContent = text;
+				warnbox.style.display = "block";
+			}
+
+			document.forms.product_key_form.addEventListener("submit", setcookie);
+			document.forms.product_key_form.product_key.addEventListener("input", format_productkey);
+			if(location.search.length > 1){
+				warn("invalid product key");
+			}
+		</script>
+		<footer>
+			<ul>
+				<li>
+					home
+				</li>
+
+				<li>
+					<a href="{{url_for("static", filename="privacy.html")}}">privacy statement</a>
+				</li>
+				<li>
+					<a href="{{url_for("static", filename="api_doc.html")}}">API documentation</a>
+				</li>
+			</ul>
+		</footer>
+	</body>
+</html>

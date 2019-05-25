@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Listing</h1>
+User Key: <code>{{user.key}}</code><br>
+Directory: <code>/{{dirname}}</code><br>
+Pattern: <code>{{pattern|default("%")}}</code><br>
+<ul>
+	{% for entry in ls %}
+	<li>
+		<a href="{{url_for("storage.get", entry=entry)}}">{{entry.path}}</a>
+	</li>
+	{% else %}
+	<li><em>empty</em></li>
+	{% endfor %}
+</ul>
+{% endblock %}

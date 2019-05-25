@@ -1,0 +1,98 @@
+/* sane layout */
+body {
+	max-width: 50em;
+	margin: 1em;
+}
+
+body.wide {
+	max-width: initial;
+}
+
+h1,h2,h3 {
+	margin-top: 1em;
+}
+
+footer {
+	padding-top: 2em;
+}
+footer ul {
+	display: inline;
+	padding-left: 0;
+}
+footer ul li {
+	display: inline;
+	margin-right: 1em;
+}
+
+tt {
+	white-space: nowrap 
+}
+
+/* notification area pinned to the bottom */
+#messages-bottom{
+	position: fixed;
+	bottom: 0px;
+	left: 1em;
+	right: 1em;
+	z-index: 10;
+}
+
+/* password manager table */
+.table 
+{
+    display:table;
+	border-collapse: collapse;
+}
+.tr
+{
+    display:table-row;
+}
+
+.tr:nth-child(even){background-color: #f2f2f2;}
+
+.td, .th
+{
+    display:table-cell;
+	padding: 2px;
+}
+
+
+.table, .td, .tr, .th {
+	border-left: none;
+	border-right: none;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	border-collapse: collapse;
+}
+
+.row-notes {
+	width: 40em;
+}
+
+.row-actions{
+	width: 10em;
+}
+
+.row-username{
+	width: 12em;
+}
+
+.row-password{
+	width: 20em;
+}
+
+/* make the notes field look more like a textarea */
+[contenteditable="true"] {
+	display: block;
+	background-color: #fff;
+	color: #000;
+	border: 1px solid #ced4da;
+	border-radius: .25rem;
+}
+
+
+/* hide password confirmation when not creating new user */
+
+input[name="create_account"]:checked + label + br + span + span.confirm {
+	display: inline !important;
+}

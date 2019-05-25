@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>responsive security</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+		<link rel="stylesheet" href="../static/style.css">
+	</head>
+	<body class="wide">
+		<div id="keygen">
+			<form id="keygen_form">
+				<h2>Login or Create New Keyring</h2>
+				<label for="account_username">username:</label>
+				<input type="text" placeholder="PaulJonas" name="account_username" id="account_username">
+				<input type="checkbox" name="create_account" id="create_account">
+				<label for="create_account">create new?</label><br>
+				<span>
+					<label for="account_password">password:</label>
+					<input type="password" placeholder="PlzU5eaVerrry53cureP@ssword!11:)" id="account_password", name="account_password">
+					<output for="account_password" class="password-evaluation"></output><br>
+				</span>
+				<span style="display:none" class="confirm">
+					<label for="confirm_password">confirm:</label>
+					<input type="password" placeholder="5ameAga1n" id="confirm_password", name="confirm_password"><br>
+				</span>
+				<input type="submit" value="ok">
+			</form>
+		</div>
+
+		<div id="manager" style="display: none">
+			<h2>Saved Passwords</h2>
+			<template id="row-template">
+				<form class="tr pw-row">
+					<span class="td">
+						<input type="button" value="&#128065;" class="pwvisible">
+						<input type="submit" value="save">
+						<input type="button" value="delete" class="delete">
+					</span>
+					<span class="td"><input type="text" name="site" ></span>
+					<span class="td"><input type="text" name="username" size=12 ></span>
+					<span class="td">
+						<input type="password"  name="password" placeholder="Password">
+					</span>
+					<span class="td"><span class="notes" name="notes"  contenteditable="true"></span></span>
+				</form>
+			</template>
+			<div class="table">
+				<div class="tr">
+					<span class="th">Actions</span>
+					<span class="th">Site/App</span>
+					<span class="th">Username</span>
+					<span class="th">Password</span>
+					<span class="th notes">Notes</span>
+				</div>
+			</div>
+		</div><!-- manager -->
+
+		<form id="config">
+			<h2>Advanced Configuration</h2>
+			<label for="pwned_endpoint">pwned passwords API endpoint</label>
+			<select name="pwned_endpoint" >
+				<option value="/pwned">A</option>
+				<option value="/pwned">B</option>
+				<option value="/pwned">C</option>
+				<option value="/pwned">D</option>
+				<option value="/pwned">E</option>
+				<option value="https://api.pwnedpasswords.com">pwnedpasswords.com</option>
+			</select><br>
+			<label for="storage_endpoints">storage API endpoint</label><br>
+			<select multiple name="storage_endpoints">
+				<option value="/storage" selected>this server</option>
+			</select><br>
+		</form>
+		<footer>
+			<ul>
+				<li>
+					home
+				</li>
+
+				<li>
+					<a href="../static/privacy.html">privacy statement</a>
+				</li>
+				<li>
+					<a href="../static/api_doc.html">API documentation</a>
+				</li>
+			</ul>
+		</footer>
+		<div id="messages-bottom"></div>
+
+		<style src="responsivesecurity.css"></style>
+		<script src="utils.js"></script>
+		<script src="encrypted_storage.js"></script>
+		<script src="password-checker.js"></script>
+		<script src="main.js"></script>
+	</body>
+</html>

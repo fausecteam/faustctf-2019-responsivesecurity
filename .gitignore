@@ -1,0 +1,6 @@
+__pycache__
+dist_root
+service/data/product_key.txt
+service/data/storage.db
+setup/uwsgi/responsivesecurity.ini
+*.log

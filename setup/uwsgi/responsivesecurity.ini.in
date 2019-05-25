@@ -1,0 +1,13 @@
+[uwsgi]
+plugin=UWSGI_MOD
+chdir=/srv/responsivesecurity/
+python-path=/srv/responsivesecurity
+uid = USER
+gid = GROUP
+callable = app
+mount = /responsivesecurity=app.py
+processes = 1
+threads = 2
+manage-script-name=true
+#die-on-idle=true
+idle = 6

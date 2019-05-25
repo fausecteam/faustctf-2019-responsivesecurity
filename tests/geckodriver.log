@@ -1,0 +1,102 @@
+1551199278370	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.ZvFHnQ8we8s3"
+1551199278791	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551199278791	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1551199280044	Marionette	INFO	Listening on port 46007
+1551199280095	Marionette	WARN	TLS certificate errors will be ignored for this session
+1551199303315	Marionette	INFO	Stopped listening on port 46007
+1551199308365	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.SOhzRvxqxliR"
+1551199308774	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551199308774	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1551199310046	Marionette	INFO	Listening on port 38137
+1551199310081	Marionette	WARN	TLS certificate errors will be ignored for this session
+1551199332004	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.8XG9DiwlKCNt"
+1551199332428	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551199332428	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1551199333721	Marionette	INFO	Listening on port 42695
+1551199333812	Marionette	WARN	TLS certificate errors will be ignored for this session
+1551199341152	Marionette	INFO	Stopped listening on port 42695
+1551199343273	Marionette	INFO	Stopped listening on port 38137
+1551199355640	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.B0hIWBo6BcLv"
+1551199356064	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551199356064	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1551199357359	Marionette	INFO	Listening on port 38161
+1551199357461	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+(/usr/lib/firefox/firefox:19691): dconf-WARNING **: 17:43:20.382: Unable to open /var/lib/flatpak/exports/share/dconf/profile/user: Permission denied
+JavaScript error: https://static.adsafeprotected.com/sca.17.4.95.js, line 33: TypeError: The ReadableStream reader was released.
+1551199474658	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.PLZ8ZBD9p27e"
+1551199475075	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551199475075	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1551199476318	Marionette	INFO	Listening on port 45937
+1551199476385	Marionette	WARN	TLS certificate errors will be ignored for this session
+1551199540959	Marionette	INFO	Stopped listening on port 45937
+1551199543048	Marionette	INFO	Stopped listening on port 38161
+1551199546126	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.tR5D91U619Go"
+1551199546547	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551199546548	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1551199547836	Marionette	INFO	Listening on port 42943
+1551199547932	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:5000/client/password-checker.js, line 2: TypeError: elem is undefined
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:188:13
+
+JavaScript error: http://localhost:5000/client/password-checker.js, line 2: TypeError: elem is undefined
+1551199628171	Marionette	INFO	Stopped listening on port 42943
+1551199646471	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.qc7ZKjijQWMH"
+1551199646876	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551199646876	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1551199648197	Marionette	INFO	Listening on port 32975
+1551199648277	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:5000/client/password-checker.js, line 2: TypeError: elem is undefined
+1551199662857	Marionette	INFO	Stopped listening on port 32975
+1551199666589	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.NgN3pTnKQzfM"
+1551199666991	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551199666992	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1551199668280	Marionette	INFO	Listening on port 38315
+1551199668310	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "Error while calling actor 'pagestyle's method 'getLayout'" "node is null"
+console.error: "getLayout@resource://devtools/server/actors/styles.js:814:5\nhandler@resource://devtools/shared/protocol.js:1197:21\nonPacket@resource://devtools/server/main.js:1324:15\nreceiveMessage@resource://devtools/shared/transport/child-transport.js:66:5\n"
+console.error: "Protocol error (unknownError): node is null"
+JavaScript error: resource://devtools/client/inspector/markup/markup.js, line 1732: TypeError: container is undefined
+JavaScript error: http://localhost:5000/client/password-checker.js, line 2: TypeError: elem is undefined
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:188:13
+
+
+(/usr/lib/firefox/firefox:21052): dconf-WARNING **: 17:48:32.652: Unable to open /var/lib/flatpak/exports/share/dconf/profile/user: Permission denied
+JavaScript error: http://localhost:5000/client/password-checker.js, line 2: TypeError: elem is undefined
+JavaScript error: http://localhost:5000/client/password-checker.js, line 2: TypeError: elem is undefined
+JavaScript error: http://localhost:5000/client/password-checker.js, line 2: TypeError: elem is undefined
+JavaScript error: http://localhost:5000/client/password-checker.js, line 2: TypeError: elem is undefined
+JavaScript error: http://localhost:5000/client/password-checker.js, line 2: TypeError: elem is undefined
+JavaScript error: http://localhost:5000/client/password-checker.js, line 2: TypeError: elem is undefined
+JavaScript error: http://localhost:5000/client/password-checker.js, line 2: TypeError: elem is undefined
+JavaScript error: http://localhost:5000/client/password-checker.js, line 2: TypeError: elem is undefined
+JavaScript error: http://localhost:5000/client/password-checker.js, line 2: TypeError: elem is undefined
+JavaScript error: http://localhost:5000/client/password-checker.js, line 2: TypeError: elem is undefined
+JavaScript error: http://localhost:5000/client/password-checker.js, line 2: TypeError: elem is undefined
+JavaScript error: http://localhost:5000/client/password-checker.js, line 2: TypeError: elem is undefined
+JavaScript error: http://localhost:5000/client/password-checker.js, line 2: TypeError: elem is undefined
+[Parent 20902, Gecko_IOThread] WARNING: pipe error (146): Connection reset by peer: file /build/firefox/src/mozilla-unified/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 349
+1551201410575	Marionette	INFO	Stopped listening on port 38315
+1551201439906	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.SgXJgQOCLhRM"
+1551201440316	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1551201440317	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1551201441601	Marionette	INFO	Listening on port 42857
+1551201441626	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[Child 22059, Chrome_ChildThread] WARNING: pipe error: Broken pipe: file /build/firefox/src/mozilla-unified/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 718
+Exiting due to channel error.
+Exiting due to channel error.
+[Child 21902, Chrome_ChildThread] WARNING: pipe error (43): Connection reset by peer: file /build/firefox/src/mozilla-unified/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 349
+Exiting due to channel error.

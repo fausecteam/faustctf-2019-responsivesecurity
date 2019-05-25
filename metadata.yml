@@ -1,0 +1,43 @@
+# Human-readable name of the service
+name: responsivesecurity
+# Name of the service for usage in paths, usernames etc.: Should only consist of lowercase alphanumeric
+# characters
+slug: responsivesecurity
+authors:
+  - Jonathan Krebs <jonathan.krebs@fau.de>
+
+install:
+  debian_packages:
+     - python3
+     - python3-pip
+     - python3-setuptools
+     - python3-pycparser
+     - python3-werkzeug
+     - python3-flask
+     - python3-flask-sqlalchemy
+     - uwsgi-plugin-python3
+
+  #  - docker.io
+  #  - docker-compose
+  # These will be run on the Vulnbox after extracting "dist_root" (from the build) to the root file system,
+  # installing Debian packages and creating the service user
+  postinst_commands:
+    - usermod -a -G responsivesecurity www-data
+    - python3 -m pip install pynacl 
+  # This doesn't work for us, due to the use of user namespaces, but docker's network=none should be equivalent.
+  prevent_outgoing_connections: False
+
+checker:
+  module: responsivesecurity
+  class: Checker
+  debian_packages:
+    - python3-requests
+    - python3-setuptools
+    - python3-pycparser
+    - chromium-driver
+  pip_packages:
+    - selenium
+    - browsermob-proxy
+    - python2-secrets
+    - pynacl
+

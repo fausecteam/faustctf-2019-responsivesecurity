@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>responsive security API documentation</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<link rel="stylesheet" href="style.css"></link>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<style>
+			h3 {
+				font-family: monospace;
+				font-size: 1.1em;
+				font-weight: bold;
+			}
+			em {
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>API Documentation</h1>
+		<h2>Pwned Passwords API</h2>
+		<h3>GET /pwned/range/<em>prefix</em></h3>
+		Similiar to the <a href="https://haveibeenpwned.com/API/v2#SearchingPwnedPasswordsByRange">Pwned Passwords API</a> from Have I Been Pwned, but without numbers. Without numbers the lines have fixed length, allowing faster searching on the server.
+		<h2>Storage API</h2>
+		Some key-value storage. Keys are composed of a 20 character user identifier and a path. All user data is deleted if not accessed for 20 minutes. The client stores encrypted files here.
+		<h3>PUT /storage/<em>user_key</em>/<em>path/without/trailing/slash</em></h3>
+		store the request body at this path
+		<h3>DELETE /storage/<em>user_key</em>/<em>path/without/trailing/slash</em></h3>
+		delete stored data
+		<h3>GET /storage/<em>user_key</em>/<em>path/without/trailing/slash</em></h3>
+		retrieve stored data
+		<h3>GET /storage/<em>user_key</em>/<br>
+		    GET /storage/<em>user_key</em>/<em>path/with/trailing/slash/</em></h3>
+		directory listing as HTML. The selector <code>#ls li a</code> finds the links containing the relative paths to stored entries.
+
+		<h2>Client Application</h2>
+		<h3>GET /client/<em>path</em></h3>
+		The <tt>responsive security</tt> client application, written in ECMAScript 2017. To use it, the cookie <code>product_key</code> containing the product key is required. The error message contains a form to set the cookie.
+		<h3>GET|POST /client/gameserver_retrieve_productkey</h3>
+		Special CTF endpoint for the checker to gain access to the product key.
+		<footer>
+			<ul>
+				<li>
+					<a href="../client">home</a>
+				</li>
+				<li>
+					<a href="privacy.html">privacy statement</a>
+				</li>
+				<li>
+					API documentation
+				</li>
+			</ul>
+		</footer>
+	</body>
+</html>
